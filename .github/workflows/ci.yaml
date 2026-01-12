@@ -1,0 +1,17 @@
+name: Chech Markdown
+
+on:
+    push:
+
+jobs:
+    markdown-lint:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v6
+
+            - name: Check README.md
+              uses: DavidAnson/markdownlint-cli2-action@v22
+              with:
+                config: 'config/custom.markdownlint.jsonc'
+                globs: README.md
