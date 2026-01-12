@@ -1,0 +1,8 @@
+{
+    // カスタム Markdownlint 設定
+    "default": true,
+    "MD013": false, // 行の長さ制限を無効化
+    "MD041": false, // 最初の行の見出し要求を無効化
+    "MD033": false, // インライン HTML を許可
+    "MD045": false  // 画像の代替テキスト要求を無効化
+}
