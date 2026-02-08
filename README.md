@@ -4,7 +4,8 @@
 
 ## 👋 Hi there
 
- <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=6AAB73&width=500&lines=My+name+is+Hitoki+Yamamoto;I'm+a+Data+Enginner 🧑‍💻;" />
+My name is Yamamoto Hitoki.
+I'm a Data Engineer🧑‍💻.
 
 ## 💬 About me
 
