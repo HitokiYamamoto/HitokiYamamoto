@@ -5,4 +5,22 @@
     ":disableDependencyDashboard",
   ],
   labels: ["renovate"],
+  packageRules: [
+    {
+      matchUpdateTypes: ["major"],
+      addLabels: ["major-update"],
+    },
+    {
+      matchUpdateTypes: ["minor"],
+      addLabels: ["minor-update"],
+    },
+    {
+      matchUpdateTypes: ["patch"],
+      addLabels: ["patch-update"],
+    },
+    {
+      matchUpdateTypes: ["digest", "pin", "pinDigest"],
+      addLabels: ["digest-update"],
+    },
+  ],
 }
