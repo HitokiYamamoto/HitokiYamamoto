@@ -28,5 +28,7 @@ jobs:
     notify-on-failure:
         needs: [build]
         if: failure()
-        uses: HitokiYamamoto/Common-Assets/.github/workflows/notify-slack-on-failure.yml@main
-        secrets: inherit
+        uses: ./.github/workflows/notify-slack-on-failure.yml
+        secrets:
+            slack_bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
+            slack_channel_id: ${{ secrets.SLACK_CHANNEL_ID }}
