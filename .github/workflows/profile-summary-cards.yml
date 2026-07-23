@@ -24,3 +24,9 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.PROFILE_SUMMARY_TOKEN }}
               with:
                   USERNAME: ${{ github.repository_owner }}
+
+    notify-on-failure:
+        needs: [build]
+        if: failure()
+        uses: HitokiYamamoto/Common-Assets/.github/workflows/notify-slack-on-failure.yml@main
+        secrets: inherit
