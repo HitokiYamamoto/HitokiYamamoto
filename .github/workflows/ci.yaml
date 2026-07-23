@@ -15,3 +15,11 @@ jobs:
               with:
                 config: 'config/custom.markdownlint.jsonc'
                 globs: README.md
+
+    notify-on-failure:
+        needs: [markdown-lint]
+        if: failure()
+        uses: ./.github/workflows/notify-slack-on-failure.yml
+        secrets:
+            slack_bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
+            slack_channel_id: ${{ secrets.SLACK_CHANNEL_ID }}

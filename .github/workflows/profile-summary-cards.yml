@@ -24,3 +24,11 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.PROFILE_SUMMARY_TOKEN }}
               with:
                   USERNAME: ${{ github.repository_owner }}
+
+    notify-on-failure:
+        needs: [build]
+        if: failure()
+        uses: ./.github/workflows/notify-slack-on-failure.yml
+        secrets:
+            slack_bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
+            slack_channel_id: ${{ secrets.SLACK_CHANNEL_ID }}
