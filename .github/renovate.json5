@@ -22,5 +22,11 @@
       matchUpdateTypes: ["digest", "pin", "pinDigest"],
       addLabels: ["digest-update"],
     },
+    {
+      matchUpdateTypes: ["lockFileMaintenance"],
+      schedule: ["before 9am on saturday"],
+      timezone: "Asia/Tokyo",
+      addLabels: ["lockfile-update"],
+    },
   ],
 }
