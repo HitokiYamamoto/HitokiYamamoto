@@ -15,12 +15,13 @@ jobs:
     runs-on: ubuntu-24.04
     # 条件判定:
     # 1. 'renovate' ラベルが含まれていること
-    # 2. 'digest-update' または 'patch-update' または 'minor-update' ラベルが含まれていること
+    # 2. 'digest-update' または 'patch-update' または 'minor-update' または 'lockfile-update' ラベルが含まれていること
     if: >-
       contains(github.event.pull_request.labels.*.name, 'renovate') &&
       (contains(github.event.pull_request.labels.*.name, 'digest-update') ||
        contains(github.event.pull_request.labels.*.name, 'patch-update') ||
-       contains(github.event.pull_request.labels.*.name, 'minor-update'))
+       contains(github.event.pull_request.labels.*.name, 'minor-update') ||
+       contains(github.event.pull_request.labels.*.name, 'lockfile-update'))
     steps:
       - name: Enable Auto-merge
         env:

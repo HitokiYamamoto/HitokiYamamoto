@@ -22,5 +22,9 @@
       matchUpdateTypes: ["digest", "pin", "pinDigest"],
       addLabels: ["digest-update"],
     },
+    {
+      matchUpdateTypes: ["lockFileMaintenance"],
+      addLabels: ["lockfile-update"],
+    },
   ],
 }
