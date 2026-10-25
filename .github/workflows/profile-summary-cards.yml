@@ -19,7 +19,7 @@ jobs:
                   token: ${{ secrets.PROFILE_SUMMARY_TOKEN }}
 
             - name: Generate Profile Summary Cards
-              uses: vn7n24fzkq/github-profile-summary-cards@58ec032e39377dd38329bdc1db70074fe74fbb17 # release
+              uses: vn7n24fzkq/github-profile-summary-cards@7022eb6bd48de38b092f54110a8ff8185f2ac4a1 # release
               env:
                   GITHUB_TOKEN: ${{ secrets.PROFILE_SUMMARY_TOKEN }}
               with:
